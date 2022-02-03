@@ -9,7 +9,8 @@ class DashboardController extends Controller
     public function index()
     {
         return view('components.dashboard', [
-            'title' => "Dashboard"
+            'title' => "Dashboard",
+            'active' => "Dashboard",
         ]);
     }
 }

@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/riwayat-peminjaman', [PeminjamanController::class, 'index'])->name('riwayat.peminjaman');
+Route::get('/riwayat-peminjaman', [PeminjamanController::class, 'riwayat'])->name('riwayat.peminjaman');
+Route::get('/pemesanan', [PeminjamanController::class, 'pemesanan'])->name('pemesanan');

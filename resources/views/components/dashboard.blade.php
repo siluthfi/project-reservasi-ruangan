@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('container')
-    <section class="hero bg-grey p-3">
+    <section class="hero p-3">
         <div class="container my-5">
             {{-- <h1>Hello World</h1> --}}
             <div class="row">
