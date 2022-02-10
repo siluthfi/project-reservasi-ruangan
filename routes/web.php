@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RuanganController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home"
-    ]);
-});
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/about', function () {
-    return view('about', [
-        "title" => "About"
-    ]);
-});
+Route::get('/ruangan', [RuanganController::class, 'ruang'])->name('ruang');
 
-Route::get('/blog', function () {
-    return view('posts', [
-        "title" => "Posts"
-    ]);
-});
+Route::get('/detail', [RuanganController::class, 'detail'])->name('detail');
